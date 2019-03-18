@@ -1,0 +1,23 @@
+﻿@model IEnumerable<RentACar.Models.Car>
+
+@foreach (var car in Model)
+{
+    <div class=" col-md-4">
+        <div class="card">
+
+            <div class="card-body">
+                <img src="~/Images/@(car.Image !=null ? car.Image : "no_img.png")" class=" img-thumbnail" style="display: block; width: 370px" />
+                <div class="bg-secondary">
+                    <h3>Car Brand:</h3> <p>@car.CarBrand</p>
+                    <h3>Car Model:</h3> <p>@car.CarModel</p>
+                    <h3>Year:</h3> <p>@car.CarYear</p>
+                    <h3>Engine Volume:</h3> <p>@car.EngineVolume</p>
+                    <h3>Horsepower:</h3> <p>@car.HorsePower</p>
+                    <h3>Type of Engine:</h3> <p>@car.TypeOfEngine</p>
+                    <h3>Mileage Volume:</h3> <p>@car.MilageVolume</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}

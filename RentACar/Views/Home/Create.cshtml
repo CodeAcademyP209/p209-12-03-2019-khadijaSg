@@ -1,0 +1,64 @@
+﻿
+@model  RentACar.Models.Car
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<br/>
+<form method="post" enctype="multipart/form-data">
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.CarBrand)
+        @Html.TextBoxFor(m => m.CarBrand, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CarBrand, null, new { @class = "text-danger" })
+    </div>
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.CarModel)
+        @Html.TextBoxFor(m => m.CarModel, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CarModel, null, new { @class = "text-danger" })
+    </div>
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.CarYear)
+        @Html.TextBoxFor(m => m.CarYear, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CarYear, null, new { @class = "text-danger" })
+    </div>
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.EngineVolume)
+        @Html.TextBoxFor(m => m.EngineVolume, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.EngineVolume, null, new { @class = "text-danger" })
+    </div>
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.HorsePower)
+        @Html.TextBoxFor(m => m.HorsePower, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.HorsePower, null, new { @class = "text-danger" })
+    </div>
+
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.TypeOfEngine)
+        @Html.TextBoxFor(m => m.TypeOfEngine, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.TypeOfEngine, null, new { @class = "text-danger" })
+    </div>
+
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.MilageVolume)
+        @Html.TextBoxFor(m => m.MilageVolume, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MilageVolume, null, new { @class = "text-danger" })
+    </div>
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.Photo)
+        @Html.TextBoxFor(m => m.Photo, new { @class = "form-control", type = "file"})
+        @Html.ValidationMessageFor(m => m.Photo, null, new { @class = "text-danger" })
+    </div>
+
+    <input type="submit" class="btn btn-success" value="Create Car"/>
+
+</form>
+
